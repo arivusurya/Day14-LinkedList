@@ -10,6 +10,7 @@ namespace DataStructure{
            linkList.Add(56);
            linkList.Add(70);
            linkList.insert(2,30);
+           linkList.DeleteFirst();
            linkList.display();
         }
     }
