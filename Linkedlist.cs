@@ -1,4 +1,5 @@
 using System;
+namespace DataStructure{
 public class Node{
         public int data;
         public Node next;
@@ -7,7 +8,7 @@ public class Node{
             this.data = data;
         }
 
-        public class LinkList{
+        public class MyLinkList{
 
         public Node head;
         private int Count ;
@@ -28,6 +29,46 @@ public class Node{
             }
             Console.WriteLine("{0} is created",node.data);
         }
+
+        
+        public void insert(int position,int data){
+            int current_positon =1;
+            Node previousNode =null ;
+            Node newnode = new Node(data);
+            if(position >this.Count){
+                Console.WriteLine("Position exceed out of range");
+                return;
+            }
+            Node temp = this.head;
+            while(current_positon < position){
+               
+                if(current_positon == position-1){
+                    previousNode = temp ;
+                    break;
+                }
+                current_positon++;
+                temp = temp.next;
+            }
+                newnode.next = previousNode.next;
+                previousNode.next =newnode;
+                this.Count++;
         }
+           public void display(){
+            Node temp = this.head;
+
+            if(temp == null){
+                System.Console.WriteLine("list is empty");
+                return ;
+            }
+
+            while(temp !=null){
+                  
+                Console.WriteLine(temp.data);
+                temp = temp.next;
+              
+            }
+        }
+    }
+}
 }
 
