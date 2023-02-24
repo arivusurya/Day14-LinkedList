@@ -9,8 +9,7 @@ namespace DataStructure{
            Node second = new Node(70);
            Node tail = new Node(30);
            head.next =second;
-           second.next = tail;
-           
+           second.next = tail;  
         }
     }
 
