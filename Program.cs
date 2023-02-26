@@ -1,5 +1,6 @@
 ﻿using System;
 using static DataStructure.Node;
+using Testcase;
 
 namespace DataStructure{
 
@@ -10,8 +11,8 @@ namespace DataStructure{
            linkList.Add(56);
            linkList.Add(70);
            linkList.insert(2,30);
-           linkList.display();
-           linkList.Search(30);
+            Test mycase = new Test();
+            mycase.tc8(linkList,30,40);
         }
     }
 

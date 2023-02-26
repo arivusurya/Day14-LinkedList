@@ -64,7 +64,7 @@ public class Node{
 
             while(temp !=null){
                   
-                Console.WriteLine(temp.data);
+                Console.Write(temp.data + "->");
                 temp = temp.next;
               
             }
@@ -92,19 +92,19 @@ public class Node{
             Current.next=null;
         }
 
-        public void Search(int num){
+        public int Search(int num){
             Node temp = this.head;
             int position = 1;
 
             while(temp.next !=null){
                 if(temp.data == num){
                     Console.WriteLine("The given number {0} found in {1}",num ,position);
-                    return;
+                    return position;
                 }
                 position++;
                 temp=temp.next;
             }
-            Console.WriteLine("Number is not found on the List");
+            return 0;
             
             
         }
